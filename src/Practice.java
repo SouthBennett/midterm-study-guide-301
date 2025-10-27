@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -27,4 +29,29 @@ public class Practice {
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
     // do maxDiff with an array, the next question with a Set, etc.
+
+    /**
+     * Returns the longest word that starts with a specific character letter in an ArrayList
+     */
+     public static String longestWord(ArrayList<String> words, char targetLetter) {
+        
+        String longestWord = "";
+        
+        for (int i = 0; i < words.size(); i++) {
+            
+            char c = words.get(i).toLowerCase().charAt(0);
+
+            char lowercaseTarget = Character.toLowerCase(targetLetter);
+
+            if (c == lowercaseTarget) {
+                String currentWord = words.get(i);
+                if (currentWord.length() > longestWord.length()) {
+                    longestWord = currentWord;
+                }
+            }
+
+        }
+        return longestWord;
+    }
+
 }

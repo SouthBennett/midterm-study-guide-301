@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 public class PracticeTest {
 
     // TODO: Make more tests for maxDiff
@@ -44,7 +46,59 @@ public class PracticeTest {
     }
     
     // TODO: Make tests for each problem you solve
-    
+    @Test
+    void testLongestWord() {
+        //Arrange
+        ArrayList<String> words = new ArrayList<>();
+        words.add("apple");
+        words.add("astronaut");
+        words.add("bed");
+        words.add("bicycle");
+        words.add("cat");
+        words.add("cartoon");
+
+        //Act
+        String actual = Practice.longestWord(words, 'c');
+
+        //Assert 
+        assertEquals("cartoon", actual);
+    }
+
+    @Test
+    void testLongestWordCaseSensitive() {
+        //Arrange
+        ArrayList<String> words = new ArrayList<>();
+        words.add("apple");
+        words.add("astronaut");
+        words.add("bed");
+        words.add("bicycle");
+        words.add("cat");
+        words.add("cartoon");
+
+        //Act
+        String actual = Practice.longestWord(words, 'A');
+
+        //Assert 
+        assertEquals("astronaut", actual);
+    }
+
+    @Test 
+    void testLongestWordNoMatchFound() {
+        //Arrange
+        ArrayList<String> words = new ArrayList<>();
+        words.add("apple");
+        words.add("astronaut");
+        words.add("bed");
+        words.add("bicycle");
+        words.add("cat");
+        words.add("cartoon");
+
+        //Act
+        String actual = Practice.longestWord(words, 'D');
+
+        //Assert 
+        assertEquals("", actual);
+    }
 }
 
 
