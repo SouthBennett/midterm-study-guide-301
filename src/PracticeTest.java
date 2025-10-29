@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.HashMap;
+
 
 public class PracticeTest {
 
@@ -136,7 +138,7 @@ public class PracticeTest {
         assertEquals(0, actual);
     }
 
-        @Test
+    @Test
     void testLongerThanShorterInvalidWordsEmptySet() {
         //Arrange
         HashSet<String> words = new HashSet<>();
@@ -147,7 +149,24 @@ public class PracticeTest {
         assertEquals(0, actual);
     }
 
-    
+    @Test
+    void testDiffBetweenOddandEven() {
+        // Arrange 
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("a", 1);
+        map.put("b", 2);
+        map.put("c", 3);
+        map.put("d", 4);
+        map.put("e", 5);
+        map.put("f", 6);
+
+        //Act
+        int acutal = Practice.diffOddAndEven(map);
+
+        //Assert
+        assertEquals(0, acutal);
+    }
+
 }
 
 
