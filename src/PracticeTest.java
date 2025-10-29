@@ -118,6 +118,36 @@ public class PracticeTest {
         // Assert Equals
         assertEquals(4, actual);
     }
+
+    @Test
+    void testLongerThanShorterInvalidWords() {
+        //Arrange
+        HashSet<String> words = new HashSet<>();
+        words.add("Do");
+        words.add("lie");
+        words.add("kill");
+        words.add("treat");
+        words.add("cookie");
+        words.add("whoopin");
+
+        //Act
+        int actual = Practice.longerThanShorterThan(words, 7, 15);
+
+        assertEquals(0, actual);
+    }
+
+        @Test
+    void testLongerThanShorterInvalidWordsEmptySet() {
+        //Arrange
+        HashSet<String> words = new HashSet<>();
+
+        //Assert
+        int actual = Practice.longerThanShorterThan(words, 3, 7);
+
+        assertEquals(0, actual);
+    }
+
+    
 }
 
 
