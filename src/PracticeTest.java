@@ -185,6 +185,20 @@ public class PracticeTest {
         assertEquals(0, actual);
     }
 
+    @Test
+    void testDiffBetweenOddandEvenOneValue() {
+        // Arrange
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("a", 1);
+
+        //Act 
+        int actual = Practice.diffOddAndEven(map);
+
+        //Assert
+        assertEquals(1, actual);
+    }
+
+
 }
 
 
