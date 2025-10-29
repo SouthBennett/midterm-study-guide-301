@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Practice {
     /**
@@ -52,6 +53,21 @@ public class Practice {
 
         }
         return longestWord;
+    }
+
+    /**
+     * Counts how many words are longer than n characters and Shorter than m characters in a HashSet
+     */
+    public static int longerThanShorterThan(HashSet<String> words, int n, int m) {
+        
+        int count = 0;
+
+        for (String word : words) {
+            if (word.length() > n && word.length() < m) {
+                count++;
+            }
+        }
+        return count;
     }
 
 }

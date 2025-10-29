@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class PracticeTest {
 
@@ -98,6 +99,24 @@ public class PracticeTest {
 
         //Assert 
         assertEquals("", actual);
+    }
+
+    @Test
+    void testLongerThanShorterThanValidWords() {
+        // Arrange
+        HashSet<String> words = new HashSet<>();
+        words.add("Do");
+        words.add("lie");
+        words.add("kill");
+        words.add("treat");
+        words.add("cookie");
+        words.add("whoopin");
+
+        // Act
+        int actual = Practice.longerThanShorterThan(words, 2, 7);
+        
+        // Assert Equals
+        assertEquals(4, actual);
     }
 }
 
