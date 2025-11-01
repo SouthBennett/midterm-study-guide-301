@@ -161,10 +161,10 @@ public class PracticeTest {
         map.put("f", 6);
 
         //Act
-        int acutal = Practice.diffOddAndEven(map);
+        int actual = Practice.diffOddAndEven(map);
 
         //Assert
-        assertEquals(0, acutal);
+        assertEquals(0, actual);
     }
 
     @Test 
