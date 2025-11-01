@@ -94,8 +94,8 @@ public class Practice {
      * Find the second-largest number in the keys of a hashmap
      */
 
-     public static int secondLargest(HashMap<Integer, String> nums) {
-        List<Integer> keys = new ArrayList<>(nums.keySet());
+     public static int secondLargest(HashMap<Integer, String> map) {
+        List<Integer> keys = new ArrayList<>(map.keySet());
 
         Collections.sort(keys);
 
