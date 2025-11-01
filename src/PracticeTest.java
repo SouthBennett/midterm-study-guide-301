@@ -150,7 +150,7 @@ public class PracticeTest {
     }
 
     @Test
-    void testDiffBetweenOddandEven() {
+    void testDiffOddandEven() {
         // Arrange 
         HashMap<String, Integer> map = new HashMap<>();
         map.put("a", 1);
@@ -168,7 +168,7 @@ public class PracticeTest {
     }
 
     @Test 
-    void testDiffBetweenOddAndEvenNegativeNumbers() {
+    void testDiffOddAndEvenNegativeNumbers() {
         // Arrange 
         HashMap<String, Integer> map = new HashMap<>();
         map.put("a", -1);
@@ -186,7 +186,7 @@ public class PracticeTest {
     }
 
     @Test
-    void testDiffBetweenOddandEvenOneValue() {
+    void testDiffOddAndEvenOneValue() {
         // Arrange
         HashMap<String, Integer> map = new HashMap<>();
         map.put("a", 1);

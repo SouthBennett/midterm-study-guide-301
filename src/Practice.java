@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Collections;
 
 public class Practice {
     /**
@@ -24,7 +26,6 @@ public class Practice {
         int maxDifference = largest - smallest;
         return maxDifference;
     }
-
 
     // TODO: Implement the other methods from the study guide AND tests for each one
 
@@ -72,7 +73,7 @@ public class Practice {
     }
 
     /**
-     * Return the difference between how many odd and even numbers there are in the values of a HashMap
+     * Find the difference between how many odd and even numbers there are in the values of a HashMap
      */
     public static int diffOddAndEven(HashMap<String, Integer> map) {
         int odd = 0;
@@ -88,5 +89,17 @@ public class Practice {
         }
         return Math.abs(even - odd);
     }
+
+    /**
+     * Find the second-largest number in the keys of a hashmap
+     */
+
+     public static int secondLargest(HashMap<Integer, String> nums) {
+        List<Integer> keys = new ArrayList<>(nums.keySet());
+
+        Collections.sort(keys);
+
+        return keys.get(keys.size() - 2);
+     }
 
 }
